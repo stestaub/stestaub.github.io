@@ -1,15 +1,9 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+![profile](https://www.gravatar.com/avatar/50583432ceff40a3efc59878777a5ab5&s=400)
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jekyll" %} /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+Stefan Staub is a passionate Software developper and enterpreneur. His focus is building Applications with Ruby on Rails. After he finished his B.Sc. in IT at the ZHAW in Winterthur, he worked at the Institute of Applied Information Technologie for two years. At the same time he fundet his startup drallo, where he works as CTO.
