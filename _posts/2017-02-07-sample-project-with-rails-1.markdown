@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Create a simple Photoblog with Ruby on Rails - Part 1"
-date:   2017-02-07 21:57:37 +0100
+date:   2017-02-07 20:00:37 +0100
 categories: rails coding
 ---
 # What it's about
@@ -9,7 +9,7 @@ In the following sections we will create a Sample Application with Ruby on Rails
 
 # What it’s NOT about
 This tutorials aim is NOT to give a deep dive and full understanding of the Rails Framework and the Ruby language. You should not expect to understand all the details. Each part references to other resources to get a better deepdive.
-
+Also I do not cover testing, although its a very important part in rails development and rails has very good support. I may will do an other part on testing later.
 
 # Other good resources to learn RoR
 The following is probably one of the best Resources for getting started with Ruby on Rails. If you really want to learn rails, take a few days, and go through the tutorial, It’s free!
@@ -33,7 +33,7 @@ Last but not least, a very good practice to learn the concepts of rails is to re
 Our demo application will be a simple photoblog where users can do the following:
 
 * Sign up with an email address and display name
-* Upload multiple photos and give it a name
+* Upload photos and give it a name
 * Browse all available photos
 * Comment on a photo
 
