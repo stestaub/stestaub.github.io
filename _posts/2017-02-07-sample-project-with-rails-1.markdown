@@ -62,7 +62,9 @@ gem install rails
 Creating the project
 Now we are ready to get started with Rails! In the console, navigate to the directory you want to have your new project and typ:
 
+```
 rails new awesome-photoblog --skip-test-unit
+```
 
 This will create a new folder with a complete setup for your new application. With --skip-test-unit we skipped the default setup for tests, because we will use rspec later on as our testing framework. You will get a lot of output on the console, informing you what the script is doing.
 
@@ -75,7 +77,7 @@ cd awesome-photoblog/
 Before you continue, make sure you fix the ruby version for this directory. With rbenv you can do that with the comman:
 
 ```
-rbenv local 2.3.3
+rbenv local 2.2.3
 ```
 
 And start up the rails server (which is, since rails 5, the puma webserver)
@@ -139,8 +141,8 @@ end
 For this purpose we gonna add bootstrap. As often, there's a gem for that!
 
 Gemfile
-```
-gem bootstrap
+```ruby
+gem 'bootstrap-sass'
 ```
 
 then run `bundle install` on the command line to install the new dependency.

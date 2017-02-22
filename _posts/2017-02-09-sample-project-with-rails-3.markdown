@@ -244,10 +244,10 @@ app/views/photo_posts/index.html.erb
   <% @photo_posts.each do |post| %>
       <div class="col-sm-4 col-md-3">
         <div class="thumbnail">
-          <%= image_tag post.photo_url %>
+          <%= image_tag post.photo_url(:thumb) %>
           <div class="caption">
             <h3><%= post.name %></h3>
-            <p>Photo by <%= current_user.email %></p>
+            <p>Photo by <%= post.user.email %></p>
           </div>
         </div>
       </div>
@@ -288,7 +288,7 @@ app/views/photo_posts/index.html.erb
           <%= image_tag post.photo_url(:thumb) %>
           <div class="caption">
             <h3><%= post.name %></h3>
-            <p>Photo by <%= current_user.email %></p>
+            <p>Photo by <%= post.user.email %></p>
           </div>
         <% end %>
       </div>
