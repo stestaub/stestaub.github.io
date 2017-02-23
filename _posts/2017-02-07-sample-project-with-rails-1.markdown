@@ -245,3 +245,5 @@ git push heroku
 ```
 
 Thats it for this part. In the next part, we are going to add some authentication to our page.
+
+[Part 2]({% post_url 2017-02-09-sample-project-with-rails-2 %})
