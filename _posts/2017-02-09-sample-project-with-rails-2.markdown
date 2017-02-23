@@ -190,6 +190,6 @@ git commit -am "Added signup and login"
 
 This is the result of Chapter 2:
 
-![start page when signed in]({{ site.url }}/assets/img/signed_in_page.png "Page when signed in")
+![start page when signed in]({{ site.baseurl }}/assets/img/signed_in_page.png "Page when signed in")
 
 [Part 3]({% post_url 2017-02-09-sample-project-with-rails-3 %})
