@@ -347,7 +347,7 @@ app/views/layout/application.html.erb
 ...
 {% endhighlight %}
 
-![photo posts](https://{{ site.baseurl }}/assets/img/photo_posts.png "Photo Posts")
+![photo posts]({{ site.baseurl }}/assets/img/photo_posts.png "Photo Posts")
 
 Well, that's it. commit the changes, then we're gonna deploy our first rails app.
 

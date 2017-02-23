@@ -88,7 +88,7 @@ rails server
 
 When we open the browser and type localhost:3000 we see a welcome page when everything is working:
 
-![rails start page](https://{{ site.baseurl }}/assets/img/rails_start.png "Rails start page")
+![rails start page]({{ site.baseurl }}/assets/img/rails_start.png "Rails start page")
 
 
 Awesome right? We already have a working rails application. But now let’s add some basic stuff that will help us a lot while developing.
@@ -208,7 +208,7 @@ And add a welcome message to our index/home view in `app/views/home/index.html.e
 
 After restarting the server and reload the page it should now look like this:
 
-![welcome page](https://{{ site.baseurl }}/assets/img/welcome_page.png "Welcome page")
+![welcome page]({{ site.baseurl }}/assets/img/welcome_page.png "Welcome page")
 
 Commit your changes with
 ```
