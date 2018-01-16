@@ -203,13 +203,28 @@ it 'should create capital through base class' do
   end
 ```
 
-# Conclusion
+# postgresql-inheritance gem
+To make it easier for creating the migrations with inherited tables, there is actually a gem available, although it
+seems not to be maintained anymore and I did not test it. Still, here is the link if you'd like to have a look at it:
+
+[https://github.com/kipcole9/postgresql-inheritance](https://github.com/kipcole9/postgresql-inheritance)
+
+# Downsides
 This method seems actually pretty interesting to me. It allows to create multitable inheritance with the
-goodness of rails STI. Of course there are some downsides as well:
+goodness of rails STI. But of course there are some downsides as well.
+
+The most important one is actually, that **REFERENCES to the base table will not include child tables**. So this would prevent us
+from having addresses that references our city including capitals (only cities will be referenced). So with this
+setup, we could still use "weak" references through Rails but DB-level constraints are not possible for now (pg version 10)
+
+Other downsides are:
 
 * It is database dependent (postgres in this specific case)
 * SQL schema_type is required as we need native sql in the migrations
-* Database Uniqueness checks are only performed on a per table basis (although you could solve that with a trigger)
+* Database Uniqueness checks are only performed on a per table basis (although you could solve that with a trigger) 
 * Caveats described here: [https://www.postgresql.org/docs/current/static/ddl-inherit.html#DDL-INHERIT-CAVEATS](https://www.postgresql.org/docs/current/static/ddl-inherit.html#DDL-INHERIT-CAVEATS)
 
-And there are maybe more which I didn't think about yet.
+# Conclusion
+This method seemed very promising in the first place. But diving deeper into the topic of pg_inheritance, it turned out
+to have some major downsides. So before using this, it is important to consider the downsides regarding to your actual use case. But in
+some cases it might still be a better option than classic Rails STI.
