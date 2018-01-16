@@ -20,12 +20,15 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "stestaub.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: staubste
 github_username:  stestaub
-
+site:
+  google_analytics: 'UA-46516755-2'
 # Build settings
 markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
+plugins:
+  - jekyll-seo-tag
 exclude:
   - Gemfile
   - Gemfile.lock
