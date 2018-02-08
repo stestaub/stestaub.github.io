@@ -45,8 +45,8 @@ The error message was something like:
 
 `ActiveRecord::RecordNotFound, class: MyModel, primary key:  (Couldn't find Example without an ID)`
 
-But wait, when I was deserializing the handler manually, it seemed to work fine. So obviously, delayed_job did something different when deserializing.
-So I decided to reproduce it in a separate environment.
+I was aware that I was passing in a record without an id, but wait, when I was deserializing the handler manually, it seemed to work fine. So obviously, delayed_job did something different when deserializing.
+I decided to reproduce it in a separate environment.
 
 I created a sample rails app with delayed job, one model called `Example` one custom worker called `ExampleJob` and using Rspec to reproduce this. 
 The code for the job looks like this:
@@ -152,6 +152,7 @@ Other learnings are
 
 1. Delayed job does not work with Records without IDS
 2. and it does not keep that failed job
+3. avoid passing around non persisted records (And definitely do not pass them to DJ)
 
 It would be nice if we could pass non persisted records to a job in order to do something with it. I'm not sure
 what is the reason that is not supported.
