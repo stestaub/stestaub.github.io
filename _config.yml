@@ -17,7 +17,7 @@ title: stestaub - Blog
 email: ste.staub@gmail.com
 description: Traveling, Family and Coding
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "stestaub.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://blog.staub-stefan.ch" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: staubste
 github_username:  stestaub
 site:
