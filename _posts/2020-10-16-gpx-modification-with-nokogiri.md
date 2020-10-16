@@ -29,9 +29,12 @@ target_duration = 12.0.seconds
 increment = target_duration / track_points_count
 
 # Loop through all track points and calculate its timestamp
-timestamps = xml.css('trkpt').each_with_index do |trkpt, idx| 
+timestamps = doc.css('trkpt').each_with_index do |trkpt, idx| 
   trkpt.at_css('time').content = (start_time + (idx+1)*increment).iso8601 
 end
+
+#finally, save back the data to a gpx file
+File.write('/path/to/new/file.gpx', doc.to_xml)
 ```
 
 This does simpli start with the `start_time` and increases equally for each track point. If the trackpoints originally have a lot different durations between them (meaning the speed of the track is not constant),a more sophisticated approach would be required, by taking the original times into account.
